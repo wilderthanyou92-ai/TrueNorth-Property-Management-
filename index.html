@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueNorth Property Management | Reliable Property Care. Every Season.</title>
+    <meta name="description" content="TrueNorth Property Management provides dependable seasonal maintenance, landscaping, remodeling, and property improvement services for residential and commercial clients.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --forest-green: #1b4332;
+            --forest-light: #2d6a4f;
+            --accent-green: #52b788;
+            --charcoal: #212529;
+            --charcoal-light: #343a40;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --gray-border: #dee2e6;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--forest-green);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Announcement / Quick Contact Bar */
+        .top-bar {
+            background-color: var(--forest-green);
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--forest-green);
+        }
+
+        .logo i {
+            color: var(--accent-green);
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--charcoal);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--forest-light);
+        }
+
+        .nav-cta {
+            background-color: var(--forest-green);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            background-color: var(--forest-light);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--forest-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.85)), url('https://images.unsplash.com/photo-1558904541-efa8c4a5c54e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 140px 0 100px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #e9ecef;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #40916c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(82, 183, 136, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--forest-green);
+        }
+
+        .btn-dark {
+            background-color: var(--forest-green);
+            color: var(--white);
+        }
+
+        .btn-dark:hover {
+            background-color: var(--forest-light);
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+            border-color: var(--accent-green);
+        }
+
+        .service-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-body {
+            padding: 25px;
+        }
+
+        .service-body h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-body p {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--bg-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .features-list {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--forest-green);
+        }
+
+        .feature-item i {
+            color: var(--accent-green);
+        }
+
+        /* Division Pages Styles (Residential, Commercial, Remodeling) */
+        .division-banner {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .division-banner h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .content-block {
+            padding: 60px 0;
+        }
+
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .split-layout.reverse {
+            direction: rtl;
+        }
+
+        .split-layout.reverse > * {
+            direction: ltr;
+        }
+
+        .split-layout img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Contact & Quote Form Section */
+        .contact-section {
+            background: linear-gradient(to bottom, var(--bg-light) 0%, var(--white) 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid var(--gray-border);
+            overflow: hidden;
+        }
+
+        .contact-info {
+            background-color: var(--forest-green);
+            color: var(--white);
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #e9ecef;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            color: var(--accent-green);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+
+        .info-item h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 30px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .contact-form-wrapper {
+            padding: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-border);
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15);
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .form-success-msg {
+            display: none;
+            background-color: #d1e7dd;
+            color: #0f5132;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            color: #adb5bd;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #adb5bd;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-green);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* Page View Switcher Control (Single File Navigation) */
+        .page-view {
+            display: none;
+        }
+
+        .page-view.active-page {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+                border-top: 1px solid var(--gray-border);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .about-grid, .contact-grid, .split-layout, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div>
+                <span><i class="fa-solid fa-compass"></i> Wisconsin’s Premier Property Care Specialist</span>
+            </div>
+            <div>
+                <a href="tel:7152803180"><i class="fa-solid fa-phone"></i> 715-280-3180</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo" onclick="switchPage('home')">
+                <i class="fa-solid fa-tree"></i> TrueNorth
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active nav-link-item" onclick="switchPage('home')">Home</a>
+                <a href="#services" class="nav-link-item" onclick="switchPage('services')">Our Services</a>
+                <a href="#residential" class="nav-link-item" onclick="switchPage('residential')">Residential</a>
+                <a href="#commercial" class="nav-link-item" onclick="switchPage('commercial')">Commercial</a>
+                <a href="#remodeling" class="nav-link-item" onclick="switchPage('remodeling')">Remodeling</a>
+                <a href="#about" class="nav-link-item" onclick="switchPage('about')">About Us</a>
+                <a href="#contact" class="nav-cta" onclick="switchPage('contact')">Request Quote</a>
+            </nav>
+            <div class="mobile-menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <main>
+
+        <!-- ================= HOME PAGE ================= -->
+        <div id="page-home" class="page-view active-page">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>Your Property. Our Priority. Every Season.</h1>
+                    <p>TrueNorth Property Management provides dependable seasonal maintenance, landscaping, and property improvement services for residential and commercial properties. From summer lawn care to winter snow removal, we help keep your property looking its best year-round.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="switchPage('contact')">Request a Free Quote</button>
+                        <button class="btn btn-secondary" onclick="switchPage('services')">Explore Our Services</button>
+                        <a href="tel:7152803180" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call Us Today</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Services Preview -->
+            <section>
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Complete Property Care, All Year Long</h2>
+                        <p>We combine professional execution, reliability, and precision to care for your most valuable real estate assets.</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8f3d691a4bf5?auto=format&fit=crop&w=600&q=80" alt="Lawn Care" class="service-img">
+                            <div class="service-body">
+                                <h3>Lawn Care & Mowing</h3>
+                                <p>Consistent, professional turf care, mowing, and lawn maintenance to keep grounds immaculate.</p>
+                                <a href="javascript:void(0)" onclick="switchPage('services')" style="color:var(--forest-light); font-weight:600;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Snow Removal" class="service-img">
+                            <div class="service-body">
+                                <h3>Snow Removal</h3>
+                                <p>Reliable winter plowing, snow blowing, and ice management to ensure safe access for properties.</p>
+                                <a href="javascript:void(0)" onclick="switchPage('services')" style="color:var(--forest-light); font-weight:600;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?auto=format&fit=crop&w=600&q=80" alt="Remodeling and Construction" class="service-img">
+                            <div class="service-body">
+                                <h3>Remodeling & Construction</h3>
+                                <p>Comprehensive renovation, structural updates, and property improvements handled by experienced professionals.</p>
+                                <a href="javascript:void(0)" onclick="switchPage('remodeling')" style="color:var(--forest-light); font-weight:600;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose TrueNorth -->
+            <section class="about-section">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <h2>Why Choose TrueNorth Property Management?</h2>
+                            <p>Property ownership should be rewarding, not an endless source of maintenance stress. We provide comprehensive, reliable oversight that protects your physical asset and preserves curb appeal through every seasonal shift.</p>
+                            <div class="features-list">
+                                <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Year-Round Care</div>
+                                <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Residential & Commercial</div>
+                                <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Request-Based Booking</div>
+                                <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Direct Communication</div>
+                            </div>
+                        </div>
+                        <div class="about-img">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Managed Property">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= OUR SERVICES PAGE ================= -->
+        <div id="page-services" class="page-view">
+            <div class="division-banner">
+                <div class="container">
+                    <h1>Our Professional Services</h1>
+                    <p>Comprehensive property maintenance, landscaping, and construction solutions</p>
+                </div>
+            </div>
+            <section class="content-block">
+                <div class="container">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8f3d691a4bf5?auto=format&fit=crop&w=600&q=80" alt="Lawn Care" class="service-img">
+                            <div class="service-body">
+                                <h3>Lawn Care & Mowing</h3>
+                                <p>Regular mowing, edging, fertilization, and weed control tailored to keep your turf pristine and healthy.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Snow Removal" class="service-img">
+                            <div class="service-body">
+                                <h3>Snow Removal</h3>
+                                <p>Prompt winter clearing for driveways, parking lots, and walkways, complete with preemptive ice management.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1558904541-efa8c4a5c54e?auto=format&fit=crop&w=600&q=80" alt="Landscaping" class="service-img">
+                            <div class="service-body">
+                                <h3>Landscaping & Outdoor Improvements</h3>
+                                <p>Mulching, planting, shrub trimming, and outdoor design elements that elevate exterior aesthetics.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Seasonal Maintenance" class="service-img">
+                            <div class="service-body">
+                                <h3>Seasonal Property Maintenance</h3>
+                                <p>Spring and fall cleanups, gutter clearing, yard debris removal, and weatherization services.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Property Maintenance" class="service-img">
+                            <div class="service-body">
+                                <h3>Residential & Commercial Upkeep</h3>
+                                <p>Routine inspections, fixture replacements, preventative care, and general property upkeep.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?auto=format&fit=crop&w=600&q=80" alt="Remodeling" class="service-img">
+                            <div class="service-body">
+                                <h3>Remodeling & Construction</h3>
+                                <p>Interior and exterior remodeling, structural upgrades, and custom renovation projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= RESIDENTIAL PAGE ================= -->
+        <div id="page-residential" class="page-view">
+            <div class="division-banner">
+                <div class="container">
+                    <h1>Residential Services</h1>
+                    <p>Dependable property care solutions designed for homeowners</p>
+                </div>
+            </div>
+            <section class="content-block">
+                <div class="container">
+                    <div class="split-layout">
+                        <div>
+                            <h2>Home Property Care Made Effortless</h2>
+                            <p>Keeping a residential property in pristine condition takes time and consistent labor. TrueNorth steps in to handle lawn care, landscaping, seasonal cleanups, and repairs so you can enjoy your home without the hassle.</p>
+                            <p>Whether you need ongoing scheduled maintenance or seasonal assistance, our crew delivers respectful, meticulous service with every visit.</p>
+                            <button class="btn btn-primary" onclick="switchPage('contact')" style="margin-top: 20px;">Request Residential Quote</button>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Residential Property">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= COMMERCIAL PAGE ================= -->
+        <div id="page-commercial" class="page-view">
+            <div class="division-banner">
+                <div class="container">
+                    <h1>Commercial Services</h1>
+                    <p>Professional property maintenance for businesses and commercial assets</p>
+                </div>
+            </div>
+            <section class="content-block">
+                <div class="container">
+                    <div class="split-layout reverse">
+                        <div>
+                            <h2>Protecting Your Business Image & Assets</h2>
+                            <p>First impressions matter in business. The exterior condition and structural integrity of your commercial real estate set the tone for customers, tenants, and visitors.</p>
+                            <p>We provide heavy-duty commercial lawn maintenance, rapid winter snow clearing, parking lot upkeep, and facility maintenance tailored to business operating schedules.</p>
+                            <button class="btn btn-primary" onclick="switchPage('contact')" style="margin-top: 20px;">Schedule Commercial Consultation</button>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Property">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= REMODELING PAGE ================= -->
+        <div id="page-remodeling" class="page-view">
+            <div class="division-banner">
+                <div class="container">
+                    <h1>Remodeling & Construction</h1>
+                    <p>Transforming and upgrading spaces with expert craftsmanship</p>
+                </div>
+            </div>
+            <section class="content-block">
+                <div class="container">
+                    <div class="split-layout">
+                        <div>
+                            <h2>Professional Renovation & Construction</h2>
+                            <p>Whether you are looking to update a residential interior, modernize a commercial space, or complete structural improvements, TrueNorth’s construction division brings precision to every project.</p>
+                            <p>We manage projects with transparency, keeping you informed from initial design concept and planning through to final buildout and cleanup.</p>
+                            <button class="btn btn-primary" onclick="switchPage('contact')" style="margin-top: 20px;">Inquire About a Project</button>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Remodeling and Construction">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= ABOUT US PAGE ================= -->
+        <div id="page-about" class="page-view">
+            <div class="division-banner">
+                <div class="container">
+                    <h1>About TrueNorth Property Management</h1>
+                    <p>Rooted in quality, driven by reliability</p>
+                </div>
+            </div>
+            <section class="content-block">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <h2>Our Commitment to Excellence</h2>
+                            <p>At TrueNorth Property Management, our name defines our mission: guiding property owners in the right direction when it comes to long-term asset care and maintenance.</p>
+                            <p>We specialize in delivering straightforward, honest, and high-standard property upkeep across residential and commercial sectors. From seasonal shifts like winter snow plowing to summer landscaping and complex construction projects, we are your dedicated single point of contact.</p>
+                        </div>
+                        <div class="about-img">
+                            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80" alt="About TrueNorth">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= CONTACT US PAGE ================= -->
+        <div id="page-contact" class="page-view">
+            <div class="division-banner">
+                <div class="container">
+                    <h1>Contact & Quote Request</h1>
+                    <p>Get in touch with our team for reliable property care and project inquiries</p>
+                </div>
+            </div>
+            <section class="content-block contact-section">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div>
+                                <h3>Get In Touch</h3>
+                                <p>Submit your service inquiry or quote request below, and our team will follow up promptly to confirm details and availability.</p>
+                                
+                                <div class="info-item">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div>
+                                        <h4>Phone</h4>
+                                        <p style="margin:0;"><a href="tel:7152803180" style="color:var(--white);">715-280-3180</a></p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <h4>Service Area</h4>
+                                        <p style="margin:0; color:#adb5bd;">Serving Wisconsin <br><small style="font-style:italic;">(Official service area territory placeholder)</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="font-size: 0.85rem; color: #adb5bd; border-top: 1px solid rgba(255,255,255,0.1); pt: 15px;">
+                                <p style="margin:0;">* Booking is request-based. We review your specifications and contact you to confirm scheduling.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-wrapper">
+                            <div id="formSuccess" class="form-success-msg">
+                                <i class="fa-solid fa-circle-check"></i> Thank you! Your request has been received. We will follow up with you shortly.
+                            </div>
+                            <form id="quoteForm" onsubmit="handleFormSubmit(event)">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="fullName">Full Name *</label>
+                                        <input type="text" id="fullName" required placeholder="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phoneNumber">Phone Number *</label>
+                                        <input type="tel" id="phoneNumber" required placeholder="715-555-0199">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emailAddress">Email Address</label>
+                                        <input type="email" id="emailAddress" placeholder="name@example.com (Optional)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="propertyType">Property Type *</label>
+                                        <select id="propertyType" required>
+                                            <option value="">Select Property Type</option>
+                                            <option value="Residential">Residential</option>
+                                            <option value="Commercial">Commercial</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="serviceNeeded">Service Needed *</label>
+                                    <select id="serviceNeeded" required>
+                                        <option value="">Select Service Required</option>
+                                        <option value="Lawn Care and Mowing">Lawn Care and Mowing</option>
+                                        <option value="Snow Removal">Snow Removal</option>
+                                        <option value="Landscaping">Landscaping and Outdoor Improvements</option>
+                                        <option value="Seasonal Maintenance">Seasonal Property Maintenance</option>
+                                        <option value="Residential Maintenance">Residential Property Maintenance</option>
+                                        <option value="Commercial Maintenance">Commercial Property Maintenance</option>
+                                        <option value="Remodeling and Construction">Remodeling & Construction Inquiry</option>
+                                        <option value="General Upkeep">General Property Upkeep</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectDetails">Project Details / Message *</label>
+                                    <textarea id="projectDetails" required placeholder="Describe your property needs, timeline, or scope of work..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: var(--white); margin-bottom: 15px;">
+                        <i class="fa-solid fa-tree"></i> TrueNorth Property Management
+                    </div>
+                    <p>Reliable Property Care. Every Season. Providing professional maintenance, landscaping, and construction services for residential and commercial clients.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" onclick="switchPage('home')">Home</a></li>
+                        <li><a href="#services" onclick="switchPage('services')">Our Services</a></li>
+                        <li><a href="#residential" onclick="switchPage('residential')">Residential</a></li>
+                        <li><a href="#commercial" onclick="switchPage('commercial')">Commercial</a></li>
+                        <li><a href="#remodeling" onclick="switchPage('remodeling')">Remodeling & Construction</a></li>
+                        <li><a href="#about" onclick="switchPage('about')">About Us</a></li>
+                        <li><a href="#contact" onclick="switchPage('contact')">Request Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fa-solid fa-phone"></i> <a href="tel:7152803180" style="color:#e9ecef;">715-280-3180</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> Email placeholder</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Service Area placeholder</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TrueNorth Property Management. All rights reserved.</p>
+                <p>Designed for Reliability & Conversion</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity and Single-File View Routing -->
+    <script>
+        // Page Navigation Switcher
+        function switchPage(pageId) {
+            // Hide all views
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(v => v.classList.remove('active-page'));
+
+            // Show target view
+            const target = document.getElementById('page-' + pageId);
+            if (target) {
+                target.classList.add('active-page');
+            }
+
+            // Update active state in nav links
+            const navItems = document.querySelectorAll('.nav-link-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if(item.getAttribute('href') === '#' + pageId) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Close mobile menu if open
+            document.getElementById('navLinks').classList.remove('show');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Collect form data values
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const service = document.getElementById('serviceNeeded').value;
+            
+            // Show confirmation banner message
+            const successMsg = document.getElementById('formSuccess');
+            successMsg.style.display = 'block';
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Reset form fields
+            document.getElementById('quoteForm').reset();
+            
+            // Hide message after 8 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 8000);
+        }
+    </script>
+</body>
+</html>
